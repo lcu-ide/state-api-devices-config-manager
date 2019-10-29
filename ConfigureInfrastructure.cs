@@ -35,6 +35,8 @@ namespace LCU.State.API.Devices.ConfigManager
             {
                 await mgr.ConfigureInfrastructure(reqData.InfrastructureType, reqData.Template);
 
+                log.LogInformation($"Configured Infrastructure: {reqData.InfrastructureType} {reqData.Template}");
+
                 return await mgr.WhenAll(
                     
                 );
